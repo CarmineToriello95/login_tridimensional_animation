@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_tridimensional_animation/constants.dart';
+import 'package:login_tridimensional_animation/pages_handler.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,12 +13,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Login Tridimensional Animation',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: firstColor,
       ),
-      home: Center()
+      home: PagesHandler(),
     );
   }
 }
-
-

@@ -64,6 +64,9 @@ flutter:
     - family: Pacifico
       fonts:
         - asset: assets/fonts/Pacifico-Regular.ttf
+    - family: Sansita
+      fonts:
+        - asset: assets/fonts/Sansita-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
