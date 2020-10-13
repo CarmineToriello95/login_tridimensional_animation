@@ -28,6 +28,64 @@ class _HomeState extends State<Home> {
           });
         },
       ),
+      endDrawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            Text(
+              'Info',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: firstColor,
+                fontFamily: 'Sansita',
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            ListTile(
+                title: Text('Terms of Service', style: drawerFieldsStyle),
+                trailing: Icon(Icons.keyboard_arrow_right),
+                onTap: () {}),
+            ListTile(
+              title: Text('Privacy policy', style: drawerFieldsStyle),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Licenses', style: drawerFieldsStyle),
+              onTap: () {},
+              trailing: Icon(Icons.keyboard_arrow_right),
+            ),
+            Text(
+              'Account',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: firstColor,
+                fontFamily: 'Sansita',
+                fontSize: 25.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            ListTile(
+              title: Text('Change Password', style: drawerFieldsStyle),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Delete Account', style: drawerFieldsStyle),
+              trailing: Icon(Icons.keyboard_arrow_right),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Logout', style: drawerFieldsStyle),
+              trailing: Icon(Icons.move_to_inbox),
+              onTap: () {
+                Navigator.pop(context, true);
+                widget.onLogoutPressed();
+              },
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -47,7 +105,9 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () => widget.onLogoutPressed(),
+                      onTap: () {
+                        Scaffold.of(context).openDrawer();
+                      },
                       child: ClipOval(
                         child: Image.asset(
                           'assets/images/avatar.png',

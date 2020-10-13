@@ -18,3 +18,7 @@ const BoxDecoration loginGradientBoxDecoration = BoxDecoration(
     end: Alignment.bottomCenter,
   ),
 );
+
+const TextStyle drawerFieldsStyle = TextStyle(
+  color: Colors.black54,
+);
