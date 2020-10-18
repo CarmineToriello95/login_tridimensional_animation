@@ -104,16 +104,11 @@ class _HomeState extends State<Home> {
                         color: firstColor,
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Scaffold.of(context).openDrawer();
-                      },
-                      child: ClipOval(
-                        child: Image.asset(
-                          'assets/images/avatar.png',
-                          width: 35,
-                          height: 35,
-                        ),
+                    ClipOval(
+                      child: Image.asset(
+                        'assets/images/avatar.png',
+                        width: 35,
+                        height: 35,
                       ),
                     ),
                   ],
